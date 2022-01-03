@@ -1,0 +1,28 @@
+#container {
+    display: grid;
+    grid-template-columns: 40% 55%;
+}
+
+#container > div {
+    margin: 10px;
+    background-color: lightcoral;
+}
+
+.recipe_img {
+    width: 90%;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.recipe_name {
+    text-align: center;
+    padding: 5px;
+}
+
+.recipe_cat, .recipe_int {
+    margin: 10px;
+}
+
+.recipe_int {
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe of the Day</title>
+    <link rel="stylesheet" href="headerstyle.css">
+    <link rel="stylesheet" href="recipeOfDay.css">
+    <script src="recipeOfDay.js"></script>
+</head>
+<body>
+
+    <div id="headerContainer"></div>
+
+    <div id="container">
+        
+    </div>
+    
+</body>
+</html>
+
+<script type="module">
+    import {header} from './header.js'
+
+    let container = document.getElementById('headerContainer');
+
+    container.innerHTML = header();
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible"
+content="IE=edge">
+ <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <div>Email</div>
+ <input type="text" id="email">
+ <div>Password</div>
+ <input type="text" id="password">
+ <br>
+ <br>
+<button onclick="button" id="button">Button</button>
+</body>
+</html>
+<script>
+
+document.getElementById("button").addEventListener("click",myFn)
+var count=0;
+var arr=JSON.parse(localStorage.getItem("myLocal"))
+ function myFn(){
+
+ var
+emailAdd=document.getElementById("email").value;
+ var
+pass=document.getElementById("password").value;
+
+ if(emailAdd=="admin"&&pass=="admin"){
+ alert("sa")
+ }else {
+ for(var i=0;i<arr.length;i++){
+
+if(arr[i].email==emailAdd&&arr[i].password==pass){
+ count=1
+
+ }
+ }
+
+ }
+ if(count>=1){
+ alert("sa")
+
+ }else{
+ alert("not")
+
+ }
+ }
+</script>

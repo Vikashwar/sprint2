@@ -1,0 +1,60 @@
+ <!DOCTYPE html> <html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible"
+content="IE=edge" />
+ <meta name="viewport" content="width=device-width,
+initial-scale=1.0" /> <title>Document</title>
+<link  rel="stylesheet" href="menu.css">
+ <style>
+ #users{
+ display: grid;
+ grid-template-columns: repeat(6,18%);
+ }
+ </style>
+ </head>
+ <body>
+ <div id="users"></div>
+ </body>
+ </html>
+ <script>
+ let divTag=document.getElementById("users")
+ async function getUsers(){
+ let url="https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian"
+ let res=await fetch(url)
+ let data=await res.json()
+ let users=data.data
+ localStorage.setItem("get",JSON.stringify(users))
+ displayItems(users)
+ console.log
+ // displayItems(data)
+ console.log("data",data)
+ }
+ getUsers()
+ function displayItems(arr){
+ arr.forEach(function(user){
+ let div=document.createElement("div")
+ let img=document.createElement("img")
+a. img.src=user.avatar;
+ let email=document.createElement("p")
+ email.innerText=user.email;
+ let name=document.createElement("p")
+.innerText=user.id;
+ let button=document.createElement("button")
+ button.innerText="Add To Cart"
+ button.addEventListener("click",myFn)
+ let lastname=document.createElement("p")
+ lastname.innerText=user.last_name;
+ div.append(img, email, name,id,lastname,button)
+ divTag.append(div)
+ });
+ //
+document.querySelector("button").addEventListener("click",myFn)
+ }
+ arr1=[]
+ function myFn(){
+ alert("Suceesul plz go to page")
+ window.location.href="sry.html"
+
+}
+ </script>
